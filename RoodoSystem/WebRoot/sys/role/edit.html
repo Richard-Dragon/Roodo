@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../css/base.css" />
+<link rel="stylesheet" href="../../css/info-reg.css" />
+<title>Roodo乐多文档管理系统</title>
+</head>
+
+<body>
+<div class="title"><h2>角色管理</h2></div>
+<div class="main">
+
+    <p class="short-input ue-clear">
+    	<label>角色名称：</label>
+        <input type="text" placeholder="" value="文件管理员"  />
+		<span><em>*</em></span>
+    </p>
+	 <p class="short-input ue-clear">
+    	<label>排序号：</label>
+        <input type="text" placeholder="" value="12"  />
+		<span><em>*</em></span>
+    </p>
+    <p class="long-input ue-clear">
+    	<label>描述：</label>
+        <input type="text" placeholder="" value="文件修改、删除管理员权限" />
+    </p>
+</div>
+<div class="btn ue-clear">
+	<a href="list.html" class="confirm">确定</a>
+    <a href="javascript:;" class="clear">清空内容</a>
+</div>
+</body>
+<script type="text/javascript" src="../../js/jquery.js" ></script>
+<script type="text/javascript" src="../../js/common.js" ></script>
+
+<script type="text/javascript">
+showRemind('input[type=text], textarea','placeholder');
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../css/base.css"  />
+<link rel="stylesheet" href="../../css/info-mgt.css"  />
+<link rel="stylesheet" href="../../css/WdatePicker.css" />
+<title>Roodo乐多文档管理系统</title>
+</head>
+
+<body>
+
+<div class="table-box">
+	<table>
+    	<thead>
+        	<tr>
+				<th class="num"><input type="checkbox" /></th>
+            	<th class="num">序号</th>
+                <th class="name">权限名称</th>
+				 <th class="name">所属模块</th>
+                <th class="node">备注</th>				
+            </tr>
+        </thead>
+        <tbody>
+        	<tr>
+				<td class="num"><input type="checkbox" /></td>
+            	<td class="num">1</td>
+                <td class="name">邮箱发送</td>           
+				<td class="name">邮箱管理</td>           
+				<td class="node">发送邮件权限</td>                  
+            </tr> 
+        				
+        </tbody>
+    </table>
+</div>
+</body>
+
+<script type="text/javascript" src="../../js/jquery.js" ></script>
+<script type="text/javascript" src="../../js/common.js" ></script>
+<script type="text/javascript" src="../../js/jquery.pagination.js" ></script>
+<script type="text/javascript">
+	$("tbody").find("tr:odd").css("backgroundColor","#eff6fa");
+</script>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../css/base.css"  />
+<link rel="stylesheet" href="../../css/info-mgt.css"  />
+<link rel="stylesheet" href="../../css/WdatePicker.css" />
+<title>Roodo文档管理系统</title>
+</head>
+
+<body>
+<div class="title"><h2>部门管理</h2></div>
+<div class="query">
+	<div class="query-conditions ue-clear">
+        <div class="conditions staff ue-clear">
+            <label>部门名称：</label>
+            <input type="text" placeholder="" />
+            <a href="javascript:;" class="staff-select">选择</a>
+        </div>
+    </div>
+    <div class="query-btn ue-clear">
+    	<a href="javascript:;" class="confirm">查询</a>
+        <a href="javascript:;" class="clear">清空条件</a> 
+    </div>
+</div>
+<div class="table-operate ue-clear">
+	<a href="add.html" class="add">添加</a>
+    <a href="javascript:;" class="del">删除</a>
+    <a href="add.html;" class="edit">编辑</a>    
+    <a href="javascript:;" class="check">xls</a>
+</div>
+<div class="table-box">
+	<table>
+    	<thead>
+        	<tr>
+            	<th class="num"><input type="checkbox" /></th>
+				<th class="num">序号</th>
+                <th class="name">部门名称</th>
+                <th class="process">上级部门</th>
+                <th class="node">添加时间</th>
+                <th class="num">排序</span></th>
+                <th class="operate">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr>
+				<td class="num"><input type="checkbox" /></td>
+            	<td class="num">1</td>
+                <td class="name">薪火华扬</td>
+                <td class="process">-</td>
+                <td class="node">2016-10-11 13:42</td>
+                <td class="num">1</td>
+                <td class="operate">
+					<a href="view.html">查看</a>
+					<a href="add.html">修改</a>
+				</td>
+            </tr>
+			<tr>
+				<td class="num"><input type="checkbox" /></td>
+            	<td class="num">2</td>
+                <td class="name">市场部</td>
+                <td class="process">薪火华扬</td>
+                <td class="node">2016-10-11 13:42</td>
+                <td class="num">2</td>
+                <td class="operate">
+					<a href="view.html">查看</a>
+					<a href="add.html">修改</a>
+				</td>
+            </tr>
+			<tr>
+				<td class="num"><input type="checkbox" /></td>
+            	<td class="num">3</td>
+                <td class="name">教学部</td>
+                <td class="process">薪火华扬</td>
+                <td class="node">2016-10-11 13:42</td>
+                <td class="num">3</td>
+                <td class="operate">
+					<a href="view.html">查看</a>
+					<a href="add.html">修改</a>
+				</td>
+            </tr>			
+			<tr>
+				<td class="num"><input type="checkbox" /></td>
+            	<td class="num">4</td>
+                <td class="name">人事部</td>
+                <td class="process">薪火华扬</td>
+                <td class="node">2016-10-11 13:42</td>
+                <td class="num">4</td>
+                <td class="operate">
+					<a href="view.html">查看</a>
+					<a href="add.html">修改</a>
+				</td>
+            </tr>	            
+        </tbody>
+    </table>
+</div>
+<div class="pagination ue-clear"></div>
+</body>
+
+
+<script type="text/javascript" src="../../js/jquery.js" ></script>
+
+<script type="text/javascript" src="../../js/common.js" ></script>
+
+<script type="text/javascript" src="../../js/jquery.pagination.js" ></script>
+
+<script type="text/javascript">
+$(".select-title").on("click",function(){
+	$(".select-list").hide();
+	$(this).siblings($(".select-list")).show();
+	return false;
+})
+$(".select-list").on("click","li",function(){
+	var txt = $(this).text();
+	$(this).parent($(".select-list")).siblings($(".select-title")).find("span").text(txt);
+})
+
+$('.pagination').pagination(100,{
+	callback: function(page){
+		alert(page);	
+	},
+	display_msg: true,
+	setPageNo: true
+});
+
+$("tbody").find("tr:odd").css("backgroundColor","#eff6fa");
+
+showRemind('input[type=text], textarea','placeholder');
+</script>
+</html>

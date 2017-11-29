@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../css/base.css" />
+<link rel="stylesheet" href="../../css/info-reg.css" />
+<title>Roodo乐多文档管理系统</title>
+</head>
+
+<body>
+<div class="title"><h2>信息登记</h2></div>
+<div class="main">
+	<p class="short-input ue-clear">
+    	<label>名称：</label>
+        <input type="text" placeholder="" />
+        <span><em>*</em></span>
+    </p>
+    <p class="short-input ue-clear">
+    	<label>唯一编号：</label>
+        <input type="text" placeholder=""  />
+		<span><em>*</em></span>
+		
+    </p>
+    <div class="short-input select ue-clear">
+    	<label>所属模块：</label>
+        <div class="select-wrap">
+        	<div class="select-title ue-clear"><span>文件上传</span><i class="icon"></i></div>
+            <ul class="select-list">
+            	<li>文档管理</li>
+                <li>通知公告</li>
+                <li>通讯录</li>
+            </ul>
+        </div>
+    </div>
+    <p class="long-input ue-clear">
+    	<label>排序值：</label>
+        <input type="text" placeholder="" />
+    </p>
+   
+    <p class="short-input ue-clear">
+    	<label>备注：</label>
+        <textarea placeholder="请输入内容"></textarea>
+    </p>
+</div>
+<div class="btn ue-clear">
+	<a href="list.html" class="confirm">确定</a>
+    <a href="javascript:;" class="clear">清空内容</a>
+</div>
+</body>
+<script type="text/javascript" src="../../js/jquery.js" ></script>
+<script type="text/javascript" src="../../js/common.js" ></script>
+
+<script type="text/javascript">
+$(".select-title").on("click",function(){
+	$(".select-list").toggle();
+	return false;
+});
+$(".select-list").on("click","li",function(){
+	var txt = $(this).text();
+	$(".select-title").find("span").text(txt);
+});
+
+
+showRemind('input[type=text], textarea','placeholder');
+</script>
+</html>
